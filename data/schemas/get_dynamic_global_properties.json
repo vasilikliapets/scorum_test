@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "result"
+    ],
+    "properties": {
+      "id": {"type": "integer"},
+      "result": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "head_block_number": {
+            "type": "integer"
+          },
+          "head_block_id": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "current_witness": {
+            "type": "string"
+          },
+          "total_supply": {
+            "type": "string"
+          },
+          "accounts_current_supply": {
+            "type": "string"
+          },
+          "confidential_supply": {
+            "type": "string"
+          },
+          "total_vesting_fund_scorum": {
+            "type": "string"
+          },
+          "total_vesting_shares": {
+            "type": "string"
+          },
+          "total_reward_shares2": {
+            "type": "string"
+          },
+          "maximum_block_size": {
+            "type": "integer"
+          },
+          "current_aslot": {
+            "type": "integer"
+          },
+          "recent_slots_filled": {
+            "type": "string"
+          },
+          "participation_count": {
+            "type": "integer"
+          },
+          "last_irreversible_block_num": {
+            "type": "integer"
+          },
+          "vote_power_reserve_rate": {
+            "type": "integer"
+          },
+          "invite_quorum": {
+            "type": "integer"
+          },
+          "dropout_quorum": {
+            "type": "integer"
+          },
+          "change_quorum": {
+            "type": "integer"
+          },
+          "current_reserve_ratio": {
+            "type": "integer"
+          },
+          "average_block_size": {
+            "type": "integer"
+          },
+          "max_virtual_bandwidth": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "head_block_number", "head_block_id", "time", "current_witness", "total_supply",
+        "accounts_current_supply", "confidential_supply", "total_vesting_fund_scorum", "total_vesting_shares",
+        "total_reward_shares2", "maximum_block_size", "current_aslot", "recent_slots_filled", "participation_count",
+        "last_irreversible_block_num", "vote_power_reserve_rate", "invite_quorum", "dropout_quorum", "change_quorum",
+        "current_reserve_ratio", "average_block_size", "max_virtual_bandwidth"]
+      }
+    }
+}

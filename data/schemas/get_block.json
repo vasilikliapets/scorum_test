@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "result"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "previous": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "witness": {
+            "type": "string"
+          },
+          "transaction_merkle_root": {
+            "type": "string"
+          },
+          "extensions": {
+            "type": "array"
+          },
+          "witness_signature": {
+            "type": "string"
+          },
+          "transactions": {
+            "type": "array"
+          },
+          "block_id": {
+            "type": "string"
+          },
+          "signing_key": {
+            "type": "string"
+          },
+          "transaction_ids": {
+            "type": "array"
+          }
+        },
+        "required": ["previous", "timestamp", "witness", "transaction_merkle_root", "extensions", "witness_signature",
+        "transactions", "block_id", "signing_key", "transaction_ids"]
+      }
+    }
+}

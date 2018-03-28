@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "result"
+    ],
+    "properties": {
+      "id": {"type": "integer"},
+      "result": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "head_block_number": {
+            "type": "integer"
+          },
+          "head_block_id": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "current_witness": {
+            "type": "string"
+          },
+          "total_supply": {
+            "type": "string"
+          },
+          "total_scorumpower": {
+            "type": "string"
+          },
+          "registration_pool_balance": {
+            "type": "string"
+          },
+          "fund_budget_balance": {
+            "type": "string"
+          },
+          "max_virtual_bandwidth": {
+            "type": "string"
+          },
+          "current_aslot": {
+            "type": "integer"
+          },
+          "median_chain_props": {
+            "type": "object",
+            "properties": {
+              "account_creation_fee": {
+                "type": "string"
+              },
+              "maximum_block_size": {
+                "type": "integer"
+              }
+            },
+            "required": ["account_creation_fee", "maximum_block_size"]
+          },
+          "content_reward_balance": {
+            "type": "string"
+          },
+          "majority_version": {
+            "type": "string"
+          },
+          "circulating_capital": {
+            "type": "string"
+          },
+          "average_block_size": {
+            "type": "integer"
+          },
+          "participation_count": {
+            "type": "integer"
+          },
+          "last_irreversible_block_num": {
+            "type": "integer"
+          },
+          "recent_slots_filled": {
+            "type": "string"
+          },
+          "reward_pool_balance": {
+            "type": "string"
+          },
+          "current_reserve_ratio": {
+            "type": "integer"
+          },
+          "vote_power_reserve_rate": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "head_block_number",
+          "head_block_id",
+          "time",
+          "current_witness",
+          "current_aslot",
+          "registration_pool_balance",
+          "fund_budget_balance",
+          "max_virtual_bandwidth",
+          "median_chain_props",
+          "content_reward_balance",
+          "majority_version",
+          "circulating_capital",
+          "average_block_size",
+          "total_supply",
+          "participation_count",
+          "total_scorumpower",
+          "last_irreversible_block_num",
+          "recent_slots_filled",
+          "reward_pool_balance",
+          "current_reserve_ratio",
+          "vote_power_reserve_rate"
+        ]
+      }
+    }
+}
