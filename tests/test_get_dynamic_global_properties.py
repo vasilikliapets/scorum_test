@@ -4,7 +4,7 @@ from jsonschema import validate
 from hamcrest import assert_that, contains_string
 
 from scorum.steps import get_dynamic_global_properties
-from scorum.matchers import has_successful_result, has_unsuccessful_result, has_error
+from scorum.matchers import has_successful_result, has_error
 from data.schemas import Schema
 import data.input_data as data
 
@@ -44,7 +44,7 @@ def test_get_dynamic_global_properties_bad_id(yaml_config):
         headers=yaml_config['headers']
     )
 
-    # assert_that(get_dynamic_global_properties_response, has_unsuccessful_result())
+    assert_that(get_dynamic_global_properties_response, has_successful_result())
     assert_that(get_dynamic_global_properties_response.text, has_error())
     assert_that(get_dynamic_global_properties_response.text,
                 contains_string(json.loads(data.dynamic_payload_bad_id)['id']))
@@ -60,7 +60,7 @@ def test_get_dynamic_global_properties_bad_method(yaml_config):
         data=data.dynamic_payload_bad_method,
         headers=yaml_config['headers']
     )
-    # assert_that(get_dynamic_global_properties_response, has_unsuccessful_result())
+    assert_that(get_dynamic_global_properties_response, has_successful_result())
     assert_that(get_dynamic_global_properties_response.text, has_error())
     assert_that(get_dynamic_global_properties_response.text,
                 contains_string(json.loads(data.dynamic_payload_bad_method)['method']))
@@ -76,7 +76,7 @@ def test_get_dynamic_global_properties_bad_params(yaml_config):
         data=data.dynamic_payload_bad_params,
         headers=yaml_config['headers']
     )
-    # assert_that(get_dynamic_global_properties_response, has_unsuccessful_result())
+    assert_that(get_dynamic_global_properties_response, has_successful_result())
     assert_that(get_dynamic_global_properties_response.text, has_error())
     assert_that(get_dynamic_global_properties_response.text,
                 contains_string(json.loads(data.dynamic_payload_bad_params)['params'][0]))

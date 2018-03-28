@@ -38,7 +38,7 @@ def test_get_block_bad_id(yaml_config):
         headers=yaml_config['headers']
     )
 
-    # assert_that(get_block_response, has_unsuccessful_result())
+    assert_that(get_block_response, has_successful_result())
     assert_that(get_block_response.text, has_error())
     assert_that(get_block_response.text,
                 contains_string(json.loads(get_block_payload_bad_id)['id']))
@@ -55,7 +55,7 @@ def test_get_block_bad_method(yaml_config):
         headers=yaml_config['headers']
     )
 
-    # assert_that(get_block_response, has_unsuccessful_result())
+    assert_that(get_block_response, has_successful_result())
     assert_that(get_block_response.text, has_error())
     assert_that(get_block_response.text,
                 contains_string(json.loads(get_block_payload_bad_method)['method']))
@@ -72,7 +72,7 @@ def test_get_block_bad_params(yaml_config):
         headers=yaml_config['headers']
     )
 
-    # assert_that(get_block_response, has_unsuccessful_result())
+    assert_that(get_block_response, has_successful_result())
     assert_that(get_block_response.text, has_error())
     assert_that(get_block_response.text,
                 contains_string(json.loads(get_block_payload_bad_params)['params'][0]))

@@ -2,3 +2,5 @@
 2) get_dynamic_global_properties response is different from etalon response in your qa-test-new.txt file.
 I've created tests for current response, not for response from your file qa-test-new.txt
 3) Reponse with error has status_code = 200. In my opinion, this is bad practice.
+4) I don't have ideas about nodes. As I understood, I need to check syncro between these three nodes,
+but how I have to do it - I don't know.
